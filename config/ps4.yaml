@@ -1,0 +1,14 @@
+# Joystick axes mapping for 6-DoF control
+axis_linear_z: 1       # Left stick vertical → linear.z (up/down)
+axis_angular_x: 4      # Right stick vertical → angular.x (pitch)
+axis_angular_y: 3      # Right stick horizontal → angular.y (roll)
+axis_angular_z: 0      # Left stick horizontal → angular.z (yaw)
+
+# Button to enable publishing
+enable_button: 5       # e.g., RB button
+
+# Scaling factors
+scale_linear_z: 1.0
+scale_angular_x: 1.0
+scale_angular_y: 1.0
+scale_angular_z: 1.0
