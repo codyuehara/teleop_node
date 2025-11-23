@@ -10,8 +10,8 @@ TeleopTwistJoy::TeleopTwistJoy()
 {
 
     linear_z_axis_ = this->declare_parameter<int>("axis_linear_z", 1);// left stick vertical
-    angular_x_axis_ = this->declare_parameter<int>("axis_angular_x", 4); // right stick vertical
-    angular_y_axis_ = this->declare_parameter<int>("axis_angular_y", 3); // right stick horizontal
+    angular_x_axis_ = this->declare_parameter<int>("axis_angular_x", 5); // right stick vertical
+    angular_y_axis_ = this->declare_parameter<int>("axis_angular_y", 2); // right stick horizontal
     angular_z_axis_ = this->declare_parameter<int>("axis_angular_z", 0); // left stick horizontal
 
     enable_button_ = this->declare_parameter<int>("enable_button", 5); // RB button
