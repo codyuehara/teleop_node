@@ -41,7 +41,11 @@ void TeleopTwistJoy::joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg)
     }
 
     geometry_msgs::msg::Twist twist;
-
+        twist.linear.z = msg->axes[linear_z_axis_] * linear_z_scale_;
+        twist.angular.x = msg->axes[angular_x_axis_] * angular_x_scale_;
+        twist.angular.y = msg->axes[angular_y_axis_] * angular_y_scale_;
+        twist.angular.z = msg->axes[angular_z_axis_] * angular_z_scale_;
+/*
     if (linear_z_axis_ >= 0 && linear_z_axis_ < static_cast<int>(msg->axes.size()))
     {
         twist.linear.z = msg->axes[linear_z_axis_] * linear_z_scale_;
@@ -64,7 +68,7 @@ void TeleopTwistJoy::joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg)
       {
         twist.angular.z = msg->axes[angular_z_axis_] * angular_z_scale_;
       }
-
+*/
       cmd_pub_->publish(twist);
 }
 

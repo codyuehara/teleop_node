@@ -27,7 +27,7 @@ def generate_launch_description():
             'config_filepath',
             default_value=[
                 launch.substitutions.TextSubstitution(text=os.path.join(
-                    get_package_share_directory('teleop_twist_joy'), 'config', '')),
+                    get_package_share_directory('teleop_node'), 'config', '')),
                 joy_config,
                 launch.substitutions.TextSubstitution(text='.yaml')
             ],
@@ -51,7 +51,7 @@ def generate_launch_description():
             executable='teleop_node',
             name='teleop_twist_joy_node',
             parameters=[config_filepath],
-            remappings=[('/cmd', joy_vel)],
+            remappings=[('cmd', joy_vel)],
         ),
     ])
 
